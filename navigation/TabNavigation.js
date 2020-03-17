@@ -7,6 +7,7 @@ import Profile from "../screens/Tabs/Profile";
 import Search from "../screens/Tabs/Search";
 import Notification from "../screens/Tabs/Notifications";
 import { createStackNavigator } from "@react-navigation/stack";
+import MessagesLink from "../components/MessagesLink";
 
 const Stack = createStackNavigator();
 
@@ -16,7 +17,7 @@ const HomeStack = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{ headerRight: () => <Text>Hello</Text> }}
+        options={{ headerRight: () => <MessagesLink /> }}
       />
     </Stack.Navigator>
   );
