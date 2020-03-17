@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="" />
+    <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/navigation/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/TabNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/TabNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Notifications.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Search.js" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor" />
@@ -45,10 +52,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="131" />
-    <option name="y" value="25" />
-    <option name="width" value="939" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="228" />
+    <option name="y" value="12" />
+    <option name="width" value="940" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectView">
@@ -56,7 +63,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -69,6 +75,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -102,24 +109,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="20" width="751" height="824" extended-state="0" />
+    <frame x="67" y="-7" width="1476" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" visible="true" weight="0.6382055" />
-      <window_info id="Structure" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="Resources Explorer" weight="0.32985073" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32947975" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32947975" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Assistant" weight="0.33507463" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.31688672" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Resources Explorer" order="5" weight="0.32985073" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32947975" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.30428955" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Assistant" order="2" weight="0.33507463" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
     </layout>
   </component>
   <component name="editorHistoryManager">
