@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/navigation/MainNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/TabNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/TabNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Notifications.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Search.js" beforeDir="false" />
-    </list>
+    <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.expo/packager-info.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="114">
+              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -53,8 +46,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="228" />
-    <option name="y" value="12" />
+    <option name="x" value="227" />
+    <option name="y" value="11" />
     <option name="width" value="940" />
     <option name="height" value="1030" />
   </component>
@@ -144,8 +137,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.expo/packager-info.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="114">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
         </state>
       </provider>
     </entry>
