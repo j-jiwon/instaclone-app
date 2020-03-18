@@ -15,8 +15,8 @@ export default () => {
       <AuthNavigation.Navigator initialRouteName="AuthHome" headerMode="none">
         <AuthNavigation.Screen name="Login" component={Login} />
         <AuthNavigation.Screen name="Confirm" component={Confirm} />
-        <AuthNavigation.Screen name="Signup" component={Signup} />
         <AuthNavigation.Screen name="AuthHome" component={AuthHome} />
+        <AuthNavigation.Screen name="Signup" component={Signup} />
       </AuthNavigation.Navigator>
     </NavigationContainer>
   );
