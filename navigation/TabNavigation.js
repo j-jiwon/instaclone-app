@@ -10,6 +10,7 @@ import Notification from "../screens/Tabs/Notifications";
 import { createStackNavigator } from "@react-navigation/stack";
 import MessagesLink from "../components/MessagesLink";
 import NavIcon from "../components/NavIcon";
+import { stackStyles } from "./config";
 
 const Stack = createStackNavigator();
 
@@ -25,7 +26,7 @@ function LogoTitle() {
 
 const HomeStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
       <Stack.Screen
         name="Home"
         component={Home}
@@ -41,7 +42,7 @@ const HomeStack = () => {
 
 const ProfileStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
       <Stack.Screen
         name="Profile"
         component={Profile}
@@ -53,7 +54,7 @@ const ProfileStack = () => {
 
 const NotificationeStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
       <Stack.Screen
         name="Activity"
         component={Notification}
@@ -67,7 +68,7 @@ const NotificationeStack = () => {
 
 const SearchStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
       <Stack.Screen name="Search" component={Search} />
     </Stack.Navigator>
   );
@@ -77,7 +78,7 @@ const TabNavigation = createBottomTabNavigator();
 
 export default ({ navigation }) => {
   return (
-    <TabNavigation.Navigator>
+    <TabNavigation.Navigator style={{ backgroundColor: "#FAFAFA" }}>
       <TabNavigation.Screen
         name="Home"
         component={HomeStack}

@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import TabNavigation from "./TabNavigation";
 import PhotoNavigation from "./PhotoNavigation";
 import MessageNavigation from "./MessageNavigation";
+import { stackStyles } from "./config";
 
 const MainNavigation = createStackNavigator();
 
@@ -13,6 +14,7 @@ export default () => {
     <NavigationContainer>
       <MainNavigation.Navigator
         initialRouteName="TabNavigation"
+        screenOptions={{ headerStyle: { ...stackStyles } }}
         headerMode="none"
         mode="modal"
       >
