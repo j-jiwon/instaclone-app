@@ -122,6 +122,7 @@ export default ({ route, navigation }) => {
           headers: { Authorization: `Bearer ${result.accessToken}` }
         });
         const { email, family_name, given_name } = await user.json();
+        console.log(email);
         updateFormData(email, given_name, family_name);
         return result.accessToken;
       } else {
@@ -183,7 +184,7 @@ export default ({ route, navigation }) => {
               bgColor={"#DB4437"}
               loading={false}
               onPress={googleLogin}
-              text="Connect Google"
+              text="Login with Google"
             />
           </GoogleContainer>
         </View>
