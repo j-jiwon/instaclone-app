@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Auth/AuthHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Auth/AuthHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Auth/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles.js" afterDir="false" />
-    </list>
+    <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +46,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="332" />
-    <option name="y" value="-15" />
+    <option name="x" value="156" />
+    <option name="y" value="37" />
     <option name="width" value="940" />
     <option name="height" value="1030" />
   </component>

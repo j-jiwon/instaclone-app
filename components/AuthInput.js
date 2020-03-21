@@ -52,14 +52,14 @@ AuthInput.propTypes = {
   ]),
   autoCapitalize: PropTypes.oneOf(["none", "sentences", "words", "characters"]),
   onChange: PropTypes.func.isRequired,
-  returnKeyType: PropTypes.oneOf(
+  returnKeyType: PropTypes.oneOf([
     "done",
     "go",
     "next",
     "send",
     "search",
     "send"
-  ),
+  ]),
   onSubmitEditing: PropTypes.func,
   autoCorrect: PropTypes.bool
 };
