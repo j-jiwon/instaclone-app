@@ -113,8 +113,8 @@ export default ({ navigation }) => {
           tabBarIcon: ({ focused }) => (
             <NavIcon
               focused={focused}
-              size={28}
-              name={Platform.OS === "ios" ? "ios-add" : "md-add"}
+              size={32}
+              name={"ios-add-circle-outline"}
             />
           ),
           tabBarLabel: ({ focused }) => false
