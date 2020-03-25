@@ -11,6 +11,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import MessagesLink from "../components/MessagesLink";
 import NavIcon from "../components/NavIcon";
 import { stackStyles } from "./config";
+import SearchBar from "../components/SearchBar";
 
 const Stack = createStackNavigator();
 
@@ -46,7 +47,9 @@ const ProfileStack = () => {
       <Stack.Screen
         name="Profile"
         component={Profile}
-        options={{ headerTitleAlign: "center" }}
+        options={{
+          headerTitleAlign: "center"
+        }}
       />
     </Stack.Navigator>
   );
@@ -69,7 +72,11 @@ const NotificationeStack = () => {
 const SearchStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
-      <Stack.Screen name="Search" component={Search} />
+      <Stack.Screen
+        name="Search"
+        component={Search}
+        options={Search.navigationOptions}
+      />
     </Stack.Navigator>
   );
 };
