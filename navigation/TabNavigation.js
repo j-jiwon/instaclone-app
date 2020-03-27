@@ -72,11 +72,7 @@ const NotificationeStack = () => {
 const SearchStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
-      <Stack.Screen
-        name="Search"
-        component={Search}
-        options={Search.navigationOptions}
-      />
+      <Stack.Screen name="Search" component={Search} />
     </Stack.Navigator>
   );
 };

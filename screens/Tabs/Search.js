@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SearchBar from "../../components/SearchBar";
-import { withNavigation } from "react-navigation";
+import useInput from "../../hooks/useInput";
 
 const View = styled.View`
   justify-content: center;
@@ -11,46 +11,24 @@ const View = styled.View`
 
 const Text = styled.Text``;
 
-export default class extends React.Component {
-  static navigationOptions = ({ navigation }) => ({
+export default ({ route, navigation }) => {
+  const searchInput = useInput(route.params, route.params);
+  let text = "";
+  if (searchInput.value != undefined) text = searchInput.value;
+  navigation.setOptions({
     headerTitle: () => (
-      <SearchBar
-        onChange={("onChange", () => null)}
-        onSubmit={("onSubmit", () => null)}
-        value={""}
-      />
-    ),
-    headerTitleAlign: "center"
+      <SearchBar {...searchInput} onSubmit={onSubmit} value={text} />
+    )
   });
 
-  constructor(props) {
-    super(props);
-    const { navigation } = props;
-    this.state = {
-      term: ""
-    };
-    navigation.setParams({
-      term: this.state.term,
-      onChange: this.onChange,
-      onSubmit: this.onSubmit
-    });
-  }
-  onChange = text => {
-    const { navigation } = this.props;
-    this.setState({ term: text });
-    navigation.setParams({
-      term: text
-    });
-  };
-  onSubmit = () => {
+  const onSubmit = () => {
     console.log("Submit");
+    text = "";
   };
 
-  render() {
-    return (
-      <View>
-        <Text>Search</Text>
-      </View>
-    );
-  }
-}
+  return (
+    <View>
+      <Text>Search</Text>
+    </View>
+  );
+};
