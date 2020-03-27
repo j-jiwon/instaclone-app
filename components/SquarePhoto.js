@@ -23,4 +23,4 @@ SquarePhoto.propTypes = {
   id: PropTypes.string.isRequired
 };
 
-export default withNavigation(SquarePhoto);
+export default SquarePhoto;
