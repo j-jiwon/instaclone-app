@@ -4,7 +4,6 @@
     <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apollo.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Tabs/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Tabs/Search.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="85" />
     <option name="width" value="940" />
     <option name="height" value="1090" />
