@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e425e0ae-cdc9-47ef-85ef-a42533168c64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Tabs/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Tabs/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Tabs/Search/SearchContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Tabs/Search/SearchContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Tabs/Search/SearchPresenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Tabs/Search/SearchPresenter.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +104,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="0" width="752" height="872" extended-state="0" />
+    <frame x="68" y="0" width="752" height="872" extended-state="1" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.63776225" />

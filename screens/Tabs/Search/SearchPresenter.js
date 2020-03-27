@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { gql } from "apollo-boost";
 import { useQuery } from "react-apollo-hooks";
 
-export const SEARCH = gql`
+const SEARCH = gql`
   query search($term: String!) {
     searchPost(term: $term) {
       id

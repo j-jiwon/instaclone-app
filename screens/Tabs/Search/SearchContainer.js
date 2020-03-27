@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SearchBar from "../../../components/SearchBar";
 import useInput from "../../../hooks/useInput";
@@ -13,6 +13,8 @@ const View = styled.View`
 const Text = styled.Text``;
 
 export default ({ route, navigation }) => {
+  const [shouldFetch, setShouldFetch] = useState(false);
+  const [term, setTerm] = useState("");
   const searchInput = useInput(route.params, route.params);
   let text = searchInput.value != undefined ? searchInput.value : "";
   navigation.setOptions({
@@ -21,14 +23,9 @@ export default ({ route, navigation }) => {
     )
   });
 
-  let term = "";
-  let shouldFetch = false;
-
   const onSubmit = () => {
-    console.log("Submit" + text);
-    term = text;
-    shouldFetch = true;
-    text = "";
+    setShouldFetch(true);
+    setTerm(text);
   };
 
   return <SearchPresenter term={term} shouldFetch={shouldFetch} />;
