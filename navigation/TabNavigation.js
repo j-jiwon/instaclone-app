@@ -14,6 +14,7 @@ import NavIcon from "../components/NavIcon";
 import { stackStyles } from "./config";
 import SearchBar from "../components/SearchBar";
 import styles from "../styles";
+import UserDetail from "../screens/UserDetail";
 
 const Stack = createStackNavigator();
 
@@ -39,6 +40,16 @@ const HomeStack = () => {
           headerTitleAlign: "center"
         }}
       />
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{ headerTintColor: styles.blackColor, title: "Photo" }}
+      />
+      <Stack.Screen
+        name="UserDetail"
+        component={UserDetail}
+        options={{ title: "User" }}
+      />
     </Stack.Navigator>
   );
 };
@@ -53,6 +64,16 @@ const ProfileStack = () => {
           headerTitleAlign: "center"
         }}
       />
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{ headerTintColor: styles.blackColor, title: "Photo" }}
+      />
+      <Stack.Screen
+        name="UserDetail"
+        component={UserDetail}
+        options={{ title: "User" }}
+      />
     </Stack.Navigator>
   );
 };
@@ -66,6 +87,16 @@ const NotificationeStack = () => {
         options={{
           headerTitleAlign: "center"
         }}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{ headerTintColor: styles.blackColor, title: "Photo" }}
+      />
+      <Stack.Screen
+        name="UserDetail"
+        component={UserDetail}
+        options={{ title: "User" }}
       />
     </Stack.Navigator>
   );
@@ -82,6 +113,11 @@ const SearchStack = () => {
         name="Detail"
         component={Detail}
         options={{ headerTintColor: styles.blackColor, title: "Photo" }}
+      />
+      <Stack.Screen
+        name="UserDetail"
+        component={UserDetail}
+        options={{ title: "User" }}
       />
     </Stack.Navigator>
   );
