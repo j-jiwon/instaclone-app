@@ -20,6 +20,10 @@ const Text = styled.Text``;
 
 export default ({ navigation }) => {
   const { loading, data } = useQuery(ME);
+  navigation.setOptions({
+    headerTitle: data.me.username
+  });
+
   return (
     <ScrollView>
       {loading ? <Loader /> : data && data.me && <UserProfile {...data.me} />}
