@@ -16,13 +16,8 @@ export const ME = gql`
   ${USER_FRAGMENT}
 `;
 
-const Text = styled.Text``;
-
 export default ({ navigation }) => {
   const { loading, data } = useQuery(ME);
-  navigation.setOptions({
-    headerTitle: data.me.username
-  });
 
   return (
     <ScrollView>

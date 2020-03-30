@@ -8,6 +8,7 @@ import { Platform } from "@unimodules/core";
 import constants from "../constants";
 import SquarePhoto from "./SquarePhoto";
 import Post from "./Post";
+import { useNavigation } from "@react-navigation/native";
 
 const ProfileHeader = styled.View`
   padding: 20px;
@@ -62,8 +63,13 @@ const UserProfile = ({
   followingCount,
   bio,
   fullName,
-  posts
+  posts,
+  username
 }) => {
+  const navigation = useNavigation();
+  navigation.setOptions({
+    headerTitle: `${username}`
+  });
   const [isGrid, setIsGrid] = useState(true);
   const toggleGrid = () => setIsGrid(i => !i);
   return (
