@@ -7,11 +7,13 @@ import Home from "../screens/Tabs/Home";
 import Profile from "../screens/Tabs/Profile";
 import Search from "../screens/Tabs/Search";
 import Notification from "../screens/Tabs/Notifications";
+import Detail from "../screens/Detail";
 import { createStackNavigator } from "@react-navigation/stack";
 import MessagesLink from "../components/MessagesLink";
 import NavIcon from "../components/NavIcon";
 import { stackStyles } from "./config";
 import SearchBar from "../components/SearchBar";
+import styles from "../styles";
 
 const Stack = createStackNavigator();
 
@@ -71,8 +73,16 @@ const NotificationeStack = () => {
 
 const SearchStack = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
+    <Stack.Navigator
+      initialRouteName="Search"
+      screenOptions={{ headerStyle: { ...stackStyles } }}
+    >
       <Stack.Screen name="Search" component={Search} />
+      <Stack.Screen
+        name="Detail"
+        component={Detail}
+        options={{ headerTintColor: styles.blackColor, title: "Photo" }}
+      />
     </Stack.Navigator>
   );
 };
