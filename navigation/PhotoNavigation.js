@@ -12,8 +12,8 @@ const Tabs = createMaterialTopTabNavigator();
 const PhotoTabs = () => {
   return (
     <Tabs.Navigator headerMode="none" tabBarPosition="bottom">
-      <Tabs.Screen name="SelectPhoto" component={SelectPhoto} />
-      <Tabs.Screen name="TakePhoto" component={TakePhoto} />
+      <Tabs.Screen name="Select" component={SelectPhoto} />
+      <Tabs.Screen name="Take" component={TakePhoto} />
     </Tabs.Navigator>
   );
 };
@@ -24,11 +24,15 @@ export default () => {
   return (
     <StackTabs.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
       <StackTabs.Screen
-        options={{ title: "" }}
+        options={{ headerShown: false }}
         name="PhotoTabs"
         component={PhotoTabs}
       />
-      <StackTabs.Screen name="UploadPhoto" component={UploadPhoto} />
+      <StackTabs.Screen
+        name="UploadPhoto"
+        component={UploadPhoto}
+        options={{ title: "" }}
+      />
     </StackTabs.Navigator>
   );
 };
