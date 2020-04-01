@@ -24,7 +24,7 @@ export default () => {
   return (
     <StackTabs.Navigator screenOptions={{ headerStyle: { ...stackStyles } }}>
       <StackTabs.Screen
-        options={{ title: "Choose Photo" }}
+        options={{ title: "Photos" }}
         name="PhotoTabs"
         component={PhotoTabs}
       />
