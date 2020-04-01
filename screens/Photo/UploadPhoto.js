@@ -9,8 +9,11 @@ const View = styled.View`
 
 const Text = styled.Text``;
 
-export default () => (
-  <View>
-    <Text>Upload</Text>
-  </View>
-);
+export default ({ route, navigation }) => {
+  const photo = route.params.photo;
+  return (
+    <View>
+      <Text>I will upload {photo.uri}</Text>
+    </View>
+  );
+};
