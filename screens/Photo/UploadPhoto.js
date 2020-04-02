@@ -60,13 +60,14 @@ export default ({ route, navigation }) => {
     });
     try {
       const {
-        data: { path }
-      } = await axios.post("http://localhost:4000/api/upload", formData, {
+        data: { location }
+      } = await axios.post("http://31d44ba2.ngrok.io/api/upload", formData, {
         headers: {
           "content-type": "multipart/form-data"
         }
       });
-      setFileUrl(path);
+      setFileUrl(location);
+      console.log(location);
     } catch (e) {
       Alert.alert("Cant upload", "Try later");
     }
