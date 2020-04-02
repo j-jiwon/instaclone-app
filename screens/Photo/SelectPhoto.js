@@ -66,6 +66,7 @@ export default ({ navigation }) => {
   useEffect(() => {
     askPermission();
   }, []);
+
   return (
     <View>
       {loading ? (
