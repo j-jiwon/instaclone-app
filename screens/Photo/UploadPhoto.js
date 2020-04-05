@@ -8,6 +8,7 @@ import styles from "../../styles";
 import constants from "../../constants";
 import { useMutation } from "react-apollo-hooks";
 import { FEED_QUERY } from "../Tabs/Home";
+import apolloClientOptions from "../../apollo";
 
 const UPLOAD = gql`
   mutation upload($caption: String!, $files: [String!]!, $location: String) {
@@ -41,7 +42,7 @@ const STextInput = styled.TextInput`
 `;
 
 const Button = styled.TouchableOpacity`
-  background-color: ${props => props.theme.blueColor};
+  background-color: ${(props) => props.theme.blueColor};
   padding: 10px;
   border-radius: 4px;
   align-items: center;
@@ -56,10 +57,10 @@ const Text = styled.Text`
 export default ({ route, navigation }) => {
   const [loading, setIsLoading] = useState(false);
   const photo = route.params.photo;
-  const captionInput = useInput("dfdf");
-  const locationInput = useInput("dfdfd");
+  const captionInput = useInput("");
+  const locationInput = useInput("");
   const [uploadMutation] = useMutation(UPLOAD, {
-    refetchQueries: () => [{ query: FEED_QUERY }]
+    refetchQueries: () => [{ query: FEED_QUERY }],
   });
   const handleSubmit = async () => {
     if (captionInput.value === "" || locationInput.value === "") {
@@ -69,29 +70,35 @@ export default ({ route, navigation }) => {
     const name = photo.filename;
     const [, type] = name.split(".");
     formData.append("file", {
-      name,
+      name: name + ".jpg",
       type: type.toLowerCase(),
-      uri: photo.uri
+      uri: photo.uri,
     });
+
     try {
       setIsLoading(true);
       const {
-        data: { location }
-      } = await axios.post("http://172.30.1.46:4000/api/upload", formData, {
-        headers: {
-          "content-type": "multipart/form-data"
+        data: { location },
+      } = await axios.post(
+        apolloClientOptions.uri.toString() + "api/upload",
+        formData,
+        {
+          headers: {
+            "content-type": "multipart/form-data",
+          },
         }
-      });
+      );
 
       const {
-        data: { upload }
+        data: { upload },
       } = await uploadMutation({
         variables: {
-          files: [location],
           caption: captionInput.value,
-          location: locationInput.value
-        }
+          location: locationInput.value,
+          files: [location],
+        },
       });
+
       if (upload.id) {
         navigation.navigate("TabNavigation");
       }
