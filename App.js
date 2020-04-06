@@ -22,23 +22,23 @@ export default function App() {
   const preLoad = async () => {
     try {
       await Font.loadAsync({
-        ...Ionicons.font
+        ...Ionicons.font,
       });
       await Asset.loadAsync([require("./assets/Instagram_logo.png")]);
       const cache = new InMemoryCache();
       await persistCache({
         cache,
-        storage: AsyncStorage
+        storage: AsyncStorage,
       });
       const client = new ApolloClient({
         cache,
-        request: async operation => {
+        request: async (operation) => {
           const token = await AsyncStorage.getItem("jwt");
           return operation.setContext({
-            headers: { Authorization: `Bearer ${token}` }
+            headers: { Authorization: `Bearer ${token}` },
           });
         },
-        ...apolloClientOptions
+        ...apolloClientOptions,
       });
 
       const isLoggedIn = await AsyncStorage.getItem("isLoggedIn");

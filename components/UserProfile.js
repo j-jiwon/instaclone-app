@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Image, View, TouchableOpacity } from "react-native";
+import { Image, View, TouchableOpacity, RefreshControl } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "../styles";
 import { Platform } from "@unimodules/core";
@@ -64,14 +64,14 @@ const UserProfile = ({
   bio,
   fullName,
   posts,
-  username
+  username,
 }) => {
   const navigation = useNavigation();
   navigation.setOptions({
-    headerTitle: `${username}`
+    headerTitle: `${username}`,
   });
   const [isGrid, setIsGrid] = useState(true);
-  const toggleGrid = () => setIsGrid(i => !i);
+  const toggleGrid = () => setIsGrid((i) => !i);
   return (
     <View>
       <ProfileHeader>
@@ -120,14 +120,16 @@ const UserProfile = ({
           </Button>
         </TouchableOpacity>
       </ButtonContainer>
-      {posts &&
-        posts.map(p =>
-          isGrid ? (
-            <SquarePhoto key={p.id} {...p} />
-          ) : (
-            <Post key={p.id} {...p} />
-          )
-        )}
+      <View style={{ flex: 1, flexDirection: "row" }}>
+        {posts &&
+          posts.map((p) =>
+            isGrid ? (
+              <SquarePhoto key={p.id} {...p} />
+            ) : (
+              <Post key={p.id} {...p} />
+            )
+          )}
+      </View>
     </View>
   );
 };
@@ -149,12 +151,12 @@ UserProfile.propTypes = {
       user: PropTypes.shape({
         id: PropTypes.string.isRequired,
         avatar: PropTypes.string,
-        username: PropTypes.string.isRequired
+        username: PropTypes.string.isRequired,
       }).isRequired,
       files: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
-          url: PropTypes.string.isRequired
+          url: PropTypes.string.isRequired,
         })
       ).isRequired,
       likeCount: PropTypes.number.isRequired,
@@ -165,14 +167,14 @@ UserProfile.propTypes = {
           text: PropTypes.string.isRequired,
           user: PropTypes.shape({
             id: PropTypes.string.isRequired,
-            username: PropTypes.string.isRequired
-          }).isRequired
+            username: PropTypes.string.isRequired,
+          }).isRequired,
         })
       ).isRequired,
       caption: PropTypes.string.isRequired,
       location: PropTypes.string,
-      createdAt: PropTypes.string.isRequired
+      createdAt: PropTypes.string.isRequired,
     })
-  )
+  ),
 };
 export default UserProfile;

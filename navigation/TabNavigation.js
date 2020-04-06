@@ -35,9 +35,12 @@ const HomeStack = () => {
         name="Home"
         component={Home}
         options={{
-          headerTitle: props => <LogoTitle {...props} />,
+          headerTitle: (props) => <LogoTitle {...props} />,
           headerRight: () => <MessagesLink />,
-          headerTitleAlign: "center"
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#ffffff",
+          },
         }}
       />
       <Stack.Screen
@@ -57,7 +60,7 @@ const ProfileStack = () => {
         name="Profile"
         component={Profile}
         options={{
-          headerTitleAlign: "center"
+          headerTitleAlign: "center",
         }}
       />
       <Stack.Screen
@@ -77,7 +80,7 @@ const NotificationeStack = () => {
         name="Activity"
         component={Notification}
         options={{
-          headerTitleAlign: "center"
+          headerTitleAlign: "center",
         }}
       />
       <Stack.Screen
@@ -122,7 +125,7 @@ export default ({ navigation }) => {
               name={Platform.OS === "ios" ? "ios-home" : "md-home"}
             />
           ),
-          tabBarLabel: ({ focused }) => false
+          tabBarLabel: ({ focused }) => false,
         }}
       />
       <TabNavigation.Screen
@@ -135,7 +138,7 @@ export default ({ navigation }) => {
               name={Platform.OS === "ios" ? "ios-search" : "md-search"}
             />
           ),
-          tabBarLabel: ({ focused }) => false
+          tabBarLabel: ({ focused }) => false,
         }}
       />
 
@@ -150,13 +153,13 @@ export default ({ navigation }) => {
               name={"ios-add-circle-outline"}
             />
           ),
-          tabBarLabel: ({ focused }) => false
+          tabBarLabel: ({ focused }) => false,
         }}
         listeners={{
-          tabPress: e => {
+          tabPress: (e) => {
             e.preventDefault();
             navigation.navigate("PhotoNavigation");
-          }
+          },
         }}
       />
       <TabNavigation.Screen
@@ -177,7 +180,7 @@ export default ({ navigation }) => {
               }
             />
           ),
-          tabBarLabel: ({ focused }) => false
+          tabBarLabel: ({ focused }) => false,
         }}
       />
       <TabNavigation.Screen
@@ -190,7 +193,7 @@ export default ({ navigation }) => {
               name={Platform.OS === "ios" ? "ios-person" : "md-person"}
             />
           ),
-          tabBarLabel: ({ focused }) => false
+          tabBarLabel: ({ focused }) => false,
         }}
       />
     </TabNavigation.Navigator>

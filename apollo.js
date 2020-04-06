@@ -1,5 +1,5 @@
 const apolloClientOptions = {
-  uri: "http://192.168.31.166:4000/",
+  uri: "https://jnstagram-backend.herokuapp.com/",
 };
 
 export default apolloClientOptions;
