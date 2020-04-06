@@ -25,10 +25,10 @@ const SearchPresenter = ({ term, shouldFetch }) => {
   const [refreshing, setRefreshing] = useState(false);
   const { data, loading, refetch } = useQuery(SEARCH, {
     variables: {
-      term
+      term,
     },
     skip: !shouldFetch,
-    fetchPolicy: "network-only"
+    fetchPolicy: "network-only",
   });
   const onRefresh = async () => {
     try {
@@ -50,7 +50,7 @@ const SearchPresenter = ({ term, shouldFetch }) => {
       ) : (
         data &&
         data.searchPost &&
-        data.searchPost.map(post => <SquarePhoto key={post.id} {...post} />)
+        data.searchPost.map((post) => <SquarePhoto key={post.id} {...post} />)
       )}
     </ScrollView>
   );
@@ -58,7 +58,7 @@ const SearchPresenter = ({ term, shouldFetch }) => {
 
 SearchPresenter.propTypes = {
   term: PropTypes.string.isRequired,
-  shouldFetch: PropTypes.bool.isRequired
+  shouldFetch: PropTypes.bool.isRequired,
 };
 
 export default SearchPresenter;
