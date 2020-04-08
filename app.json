@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "jnstagram",
     "slug": "instaclone-app",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/jnstagramlogo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -18,7 +18,13 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nowiz.jnstagram",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.nowiz.jnstagram",
+      "versionCode": 1
     }
   }
 }
