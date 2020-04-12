@@ -2,11 +2,11 @@
 
 screens:
 
-- [ ] Home
-- [ ] Search
-- [ ] Upload
-- [ ] Notification
-- [ ] Profile
-- [ ] Edit Profile
-- [ ] Photo Comments
-- [ ] Photo Likes
+- [x] Home
+- [x] Search
+- [x] Upload
+- [x] Notification
+- [x] Profile
+- [x] Edit Profile
+- [x] Photo Comments
+- [x] Photo Likes
