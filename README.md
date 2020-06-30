@@ -1,4 +1,4 @@
-# instaclone iOS & Android App
+# instaclone Android App with Expo
 
 screens:
 
